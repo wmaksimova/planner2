@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Canvas Background="#FAC3F0">
+        <Canvas Background="Red">
             <Image x:Name="calendar" Source="Resources/new_calendar.png" Width="30" Height="30" Canvas.Left="10" Canvas.Top="10"/>
             <ListBox x:Name="dateList" Width="158" Height="24" Canvas.Left="40" Canvas.Top="16" Background="#FAC3F0" RenderTransformOrigin="0.499,0.453"/>
         </Canvas>
