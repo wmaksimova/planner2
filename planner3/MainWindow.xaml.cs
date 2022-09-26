@@ -23,16 +23,21 @@ namespace planner3
         public MainWindow()
         {
             InitializeComponent();
-            List<string> dates = new List<string>();
-            DateTime[] datesTime = new DateTime[10];
-            datesTime[0] = DateTime.Today;
-            dates.Add(datesTime[0].ToLongDateString());
-            for (int i = 1; i < 10; i++)
-            {
-                datesTime[i] = datesTime[i - 1].AddDays(1);
-                dates.Add(datesTime[i].ToLongDateString());
-            }
-            dateList.ItemsSource = dates;
+            date_text.Text = DateTime.Today.ToLongDateString();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            calendar_planner.Visibility = Visibility;
+            date_text.Visibility = Visibility.Hidden;
+        }
+
+        private void calendar_planner_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DateTime data = (DateTime)calendar_planner.SelectedDate;
+            date_text.Text = data.ToLongDateString();
+            calendar_planner.Visibility = Visibility.Hidden;
+            date_text.Visibility = Visibility;
         }
     }
 }
