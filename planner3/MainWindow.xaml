@@ -26,9 +26,9 @@
             <!--<Button x:Name="Button_calendar" Width="30" Height="30" Canvas.Left="16" Canvas.Top="15" RenderTransformOrigin="0.5,0.5"
                     Background="Transparent" BorderBrush="Transparent" Foreground="Transparent" Click="Button_calendar_Click" Panel.ZIndex="-2" ClickMode="Press"/>-->
             <Image x:Name="calendar_image" Source="Resources/calendar-iconpng.png" Width="30" Height="30" Canvas.Left="16" Canvas.Top="14"/>
-            <TextBox x:Name="date_text" Canvas.Left="44" Canvas.Top="15" Width="182" Height="30"
+            <TextBox x:Name="date_text" Canvas.Left="51" Canvas.Top="15" Width="167" Height="30"
                      Background="Transparent" SelectionBrush="Transparent" BorderBrush="Transparent" FontSize="20" IsReadOnlyCaretVisible="True" Foreground="#FFE68EF5"></TextBox>
-            <Calendar x:Name="calendar_planner" Canvas.Left="45" Canvas.Top="10" Visibility="Hidden" SelectedDatesChanged="calendar_planner_SelectedDatesChanged"></Calendar>
+            <Calendar x:Name="calendar_planner" Canvas.Left="378" Canvas.Top="15" Visibility="Visible" SelectedDatesChanged="calendar_planner_SelectedDatesChanged"></Calendar>
 
 
             <TextBox Canvas.Left="10" Canvas.Top="65" BorderBrush="#00000000" Background="Transparent" FontSize="18" TextWrapping="Wrap" Width="272" Foreground="White" SelectionBrush="#000078D7" FontWeight="Bold">Сколько дел запланировано на сегодня?</TextBox>
@@ -49,7 +49,7 @@
                     <TextBox/>
                 </ListBoxItem>
                 <ListBoxItem x:Name="ListBoxItem_four" Margin="0,0,0,10">
-                    <TextBox/>
+                    <TextBox FontSize="16"/>
                 </ListBoxItem>
                 <ListBoxItem x:Name="ListBoxItem_five" Margin="0,0,0,10">
                     <TextBox/>
