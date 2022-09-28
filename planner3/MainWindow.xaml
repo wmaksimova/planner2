@@ -9,21 +9,59 @@
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="530" Width="586.538">
     <Grid>
-        <Canvas x:Name="canvas_planner" Margin="0,0,0,-30" Height="530">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="417*"/>
+            <ColumnDefinition Width="163*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="canvas_planner" Grid.ColumnSpan="2">
+
             <Canvas.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF81FFEF" Offset="0"/>
-                    <GradientStop Color="#FFF067B4" Offset="1"/>
+                    <GradientStop Color="#FFEE91F5" Offset="0"/>
+                    <GradientStop Color="#FF5961F9" Offset="1"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <Image x:Name="calendar_image" Source="Resources/new_calendar.png" Width="30" Height="30" Canvas.Left="10" Canvas.Top="10"/>
-            <Button Width="30" Height="30" Canvas.Left="10" Canvas.Top="10" RenderTransformOrigin="0.456,0.473"
-                    Background="Transparent" BorderBrush="Transparent" Foreground="Transparent" Click="Button_Click"/>
-            <TextBox x:Name="date_text" Canvas.Left="40" Canvas.Top="10" Width="182" Height="30"
-                     Background="Transparent" SelectionBrush="Transparent" BorderBrush="Transparent" FontSize="20" IsReadOnlyCaretVisible="True"></TextBox>
+
+            <Rectangle Fill="White" Width="221" Height="39" RadiusX="15" RadiusY="15" Canvas.Left="10" Canvas.Top="10" />
+            <!--<Button x:Name="Button_calendar" Width="30" Height="30" Canvas.Left="16" Canvas.Top="15" RenderTransformOrigin="0.5,0.5"
+                    Background="Transparent" BorderBrush="Transparent" Foreground="Transparent" Click="Button_calendar_Click" Panel.ZIndex="-2" ClickMode="Press"/>-->
+            <Image x:Name="calendar_image" Source="Resources/calendar-iconpng.png" Width="30" Height="30" Canvas.Left="16" Canvas.Top="14"/>
+            <TextBox x:Name="date_text" Canvas.Left="44" Canvas.Top="15" Width="182" Height="30"
+                     Background="Transparent" SelectionBrush="Transparent" BorderBrush="Transparent" FontSize="20" IsReadOnlyCaretVisible="True" Foreground="#FFE68EF5"></TextBox>
             <Calendar x:Name="calendar_planner" Canvas.Left="45" Canvas.Top="10" Visibility="Hidden" SelectedDatesChanged="calendar_planner_SelectedDatesChanged"></Calendar>
-            <TextBox Canvas.Left="10" Canvas.Top="65" BorderBrush="Transparent" Background="Transparent" FontSize="18">Сколько дел запланировано на сегодня?</TextBox>
-            
+
+
+            <TextBox Canvas.Left="10" Canvas.Top="65" BorderBrush="#00000000" Background="Transparent" FontSize="18" TextWrapping="Wrap" Width="272" Foreground="White" SelectionBrush="#000078D7" FontWeight="Bold">Сколько дел запланировано на сегодня?</TextBox>
+            <TextBox x:Name="count_of_affairs" Grid.Column="0" Canvas.Left="117" Canvas.Top="97" Background="Transparent">1</TextBox>
+            <StackPanel Grid.Column="1" Orientation="Vertical" Canvas.Left="132" Canvas.Top="97" Width="30" Height="20">
+                <Button FontSize="7" Click="Button_Click_1" Background="Transparent">↑</Button>
+                <Button FontSize="7" Click="Button_Click_2" Background="Transparent">↓</Button>
+            </StackPanel>
+
+            <ListBox Canvas.Left="10" Canvas.Top="122" Width="360" Background="Transparent" BorderBrush="Transparent" Foreground="Transparent">
+                <ListBoxItem x:Name="ListBoxItem_one" Margin="0,0,0,10">
+                    <TextBox/>
+                </ListBoxItem>
+                <ListBoxItem x:Name="ListBoxItem_two" Margin="0,0,0,10">
+                    <TextBox/>
+                </ListBoxItem>
+                <ListBoxItem x:Name="ListBoxItem_tree" Margin="0,0,0,10">
+                    <TextBox/>
+                </ListBoxItem>
+                <ListBoxItem x:Name="ListBoxItem_four" Margin="0,0,0,10">
+                    <TextBox/>
+                </ListBoxItem>
+                <ListBoxItem x:Name="ListBoxItem_five" Margin="0,0,0,10">
+                    <TextBox/>
+                </ListBoxItem>
+                <ListBoxItem x:Name="ListBoxItem_six" Margin="0,0,0,10">
+                    <TextBox/>
+                </ListBoxItem>
+                <ListBoxItem x:Name="ListBoxItem_seven" Margin="0,0,0,10">
+                    <TextBox/>
+                </ListBoxItem>
+            </ListBox>
+            <Button x:Name="button_calendar" Width="30" Height="30" Canvas.Left="16" Canvas.Top="15" Click="button_calendar_Click" Background="#00DDDDDD" BorderBrush="#00707070"/>
         </Canvas>
     </Grid>
 </Window>
