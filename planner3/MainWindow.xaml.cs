@@ -71,5 +71,11 @@ namespace planner3
             calendar_planner.Visibility = Visibility;
             date_text.Visibility = Visibility.Hidden;
         }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
     }
 }
